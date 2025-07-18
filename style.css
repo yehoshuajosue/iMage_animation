@@ -11,12 +11,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /* importante para posicionar os SVGs absolutamente */
 }
 
 .row {
   display: flex;
 }
 
+/* Todos os SVGs ficam ocultos inicialmente */
 .logo-svg {
   display: none;
   position: absolute;
@@ -25,13 +27,14 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* Quando a classe active-frame está presente, mostra o SVG */
+.logo-svg.active-frame {
+  display: block;
+}
+
 .logo-text {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-top: 400px;
   font-size: 50px;
   z-index: 2;
-}
-
-.logo-svg.active-frame {
-  display: block;
 }
